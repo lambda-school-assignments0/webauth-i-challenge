@@ -8,7 +8,7 @@ const UsersRouter = require("./users/users-router.js");
 server.use(helmet());
 server.use(express.json());
 server.use(cors());
-// server.use('api/restricted', UsersRouter);
+server.use('/api', UsersRouter);
 
 server.get("/", (req, res) => {
     res.send("Server is running successfully.");
